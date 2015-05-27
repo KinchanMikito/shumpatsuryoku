@@ -405,6 +405,7 @@
 				EADC6C131AFE1BA500711EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EADC6C141AFE1BA500711EDE /* Build configuration list for PBXNativeTarget "isshunTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				EADC6C161AFE1BA500711EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

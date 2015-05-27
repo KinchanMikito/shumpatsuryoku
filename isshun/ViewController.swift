@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     var timer:NSTimer!
     
+    var timer2:NSTimer!
+    
     var count:Double = 0.0
     
     @IBOutlet var button:UIButton!
@@ -21,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet var oneMore:UIButton!
     
     @IBOutlet var timeLab:UILabel!
+    
+    var appeared:Bool = false
     
     
     override func viewDidLoad() {
@@ -41,7 +45,9 @@ class ViewController: UIViewController {
         label.text = "😆"
         timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: Selector("b"), userInfo: nil, repeats: true)
         
-        button.hidden = false
+        appeared = true
+        
+        //button.hidden = false
         
         
     }
@@ -52,26 +58,42 @@ class ViewController: UIViewController {
     }
     func start(){
         
-        button.hidden = true
+        //button.hidden = true
+        
+        //count = 0
         
         oneMore.hidden = true
         
         label.text = nil
         
-        var count:Int = Int(arc4random_uniform(4))
-        count += 3
+        var a:Int = Int(arc4random_uniform(4))
+        a += 3
         
-        NSTimer.scheduledTimerWithTimeInterval(Double(count), target: self, selector: Selector("a"), userInfo: nil, repeats: false)
+        timer2 = NSTimer.scheduledTimerWithTimeInterval(Double(a), target: self, selector: Selector("a"), userInfo: nil, repeats: false)
         
         timeLab.text = nil
+        
+        appeared = false
         
     }
     
     @IBAction func Tap(){
         
-        timer.invalidate()
-        
-        timeLab.text = String(format: "%.3  f", Float(count))
+        if appeared == false{
+            
+            timer2.invalidate()
+            
+            timeLab.text = "failed..."
+            
+            label.text = "😭"
+            
+        }else{
+            
+            timer.invalidate()
+            
+            timeLab.text = String(format: "%.3f", Float(count))
+            
+        }
         
         oneMore.hidden = false
         
@@ -80,6 +102,8 @@ class ViewController: UIViewController {
     @IBAction func tapMokkai(){
         
         start()
+        
+        count = 0
         
     }
 }
