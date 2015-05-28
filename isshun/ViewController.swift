@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var oneMore:UIButton!
     
+    @IBOutlet var toTitle:UIButton!
+    
     @IBOutlet var timeLab:UILabel!
     
     var appeared:Bool = false
@@ -88,6 +90,8 @@ class ViewController: UIViewController {
         
         appeared = false
         
+        toTitle.hidden = true
+        
     }
     
     @IBAction func Tap(){
@@ -112,7 +116,7 @@ class ViewController: UIViewController {
         
         oneMore.hidden = false
         
-        
+        toTitle.hidden = false
         
     }
 
