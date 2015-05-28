@@ -8,6 +8,15 @@
 
 import UIKit
 
+let ud = NSUserDefaults.standardUserDefaults()
+
+var no1:Double = ud.doubleForKey("zero")
+var no2:Double = ud.doubleForKey("one")
+var no3:Double = ud.doubleForKey("two")
+var no4:Double = ud.doubleForKey("three")
+var no5:Double = ud.doubleForKey("four")
+
+
 class ViewController: UIViewController {
     
     @IBOutlet var label:UILabel!
@@ -26,13 +35,17 @@ class ViewController: UIViewController {
     
     var appeared:Bool = false
     
+    var highscores:[Double] = [no1,no2,no3,no4,no5]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         
         start()
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,9 +106,13 @@ class ViewController: UIViewController {
             
             timeLab.text = String(format: "%.3f", Float(count))
             
+            ranking(count)
+            
         }
         
         oneMore.hidden = false
+        
+        
         
     }
 
@@ -104,6 +121,40 @@ class ViewController: UIViewController {
         start()
         
         count = 0
+        
+    }
+    
+    func ranking(score:Double){
+        
+        for var i = 0; i < 5; i++ {
+            
+            if highscores[i] > score{
+                
+                for var j = 4; j > i; j-- {
+                    
+                    highscores[j] = highscores[j - 1]
+                    
+                }
+                
+                highscores[i] = score
+                
+                no1 = highscores[0]
+                no2 = highscores[1]
+                no3 = highscores[2]
+                no4 = highscores[3]
+                no5 = highscores[4]
+                
+                ud.setDouble(no1, forKey: "zero")
+                ud.setDouble(no2, forKey: "one")
+                ud.setDouble(no3, forKey: "two")
+                ud.setDouble(no4, forKey: "three")
+                ud.setDouble(no5, forKey: "four")
+                
+                break
+                
+            }
+            
+        }
         
     }
 }

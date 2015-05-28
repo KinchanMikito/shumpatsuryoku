@@ -13,6 +13,7 @@
 		EADC6BFF1AFE1BA500711EDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADC6BFE1AFE1BA500711EDE /* Images.xcassets */; };
 		EADC6C021AFE1BA500711EDE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EADC6C001AFE1BA500711EDE /* LaunchScreen.xib */; };
 		EADC6C0E1AFE1BA500711EDE /* isshunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC6C0D1AFE1BA500711EDE /* isshunTests.swift */; };
+		EAE88E981B172B0800D0B2AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE88E971B172B0800D0B2AF /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EADC6C071AFE1BA500711EDE /* isshunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = isshunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADC6C0C1AFE1BA500711EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EADC6C0D1AFE1BA500711EDE /* isshunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isshunTests.swift; sourceTree = "<group>"; };
+		EAE88E971B172B0800D0B2AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				EADC6BF71AFE1BA400711EDE /* AppDelegate.swift */,
+				EAE88E971B172B0800D0B2AF /* HomeViewController.swift */,
 				EADC6BF91AFE1BA400711EDE /* ViewController.swift */,
 				EADC6BFB1AFE1BA400711EDE /* Main.storyboard */,
 				EADC6BFE1AFE1BA500711EDE /* Images.xcassets */,
@@ -214,6 +217,7 @@
 			files = (
 				EADC6BFA1AFE1BA400711EDE /* ViewController.swift in Sources */,
 				EADC6BF81AFE1BA400711EDE /* AppDelegate.swift in Sources */,
+				EAE88E981B172B0800D0B2AF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
