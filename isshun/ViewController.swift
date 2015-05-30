@@ -8,6 +8,8 @@
 
 import UIKit
 
+import iAd
+
 let ud = NSUserDefaults.standardUserDefaults()
 
 var no1:Double = ud.doubleForKey("zero")
@@ -46,7 +48,7 @@ class ViewController: UIViewController {
         
         start()
         
-        
+        self.canDisplayBannerAds = true
         
     }
 

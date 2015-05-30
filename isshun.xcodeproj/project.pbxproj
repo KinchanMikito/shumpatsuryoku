@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA1396AE1B1894D8003E4A62 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1396AD1B1894D8003E4A62 /* GameKit.framework */; };
+		EA1396B01B189ADD003E4A62 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1396AF1B189ADD003E4A62 /* iAd.framework */; };
 		EADC6BF81AFE1BA400711EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC6BF71AFE1BA400711EDE /* AppDelegate.swift */; };
 		EADC6BFA1AFE1BA400711EDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC6BF91AFE1BA400711EDE /* ViewController.swift */; };
 		EADC6BFD1AFE1BA400711EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADC6BFB1AFE1BA400711EDE /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA1396AD1B1894D8003E4A62 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		EA1396AF1B189ADD003E4A62 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EADC6BF21AFE1BA400711EDE /* isshun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = isshun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADC6BF61AFE1BA400711EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EADC6BF71AFE1BA400711EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1396B01B189ADD003E4A62 /* iAd.framework in Frameworks */,
+				EA1396AE1B1894D8003E4A62 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 		EADC6BE91AFE1BA400711EDE = {
 			isa = PBXGroup;
 			children = (
+				EA1396AF1B189ADD003E4A62 /* iAd.framework */,
+				EA1396AD1B1894D8003E4A62 /* GameKit.framework */,
 				EADC6BF41AFE1BA400711EDE /* isshun */,
 				EADC6C0A1AFE1BA500711EDE /* isshunTests */,
 				EADC6BF31AFE1BA400711EDE /* Products */,
@@ -164,6 +172,12 @@
 				TargetAttributes = {
 					EADC6BF11AFE1BA400711EDE = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 3GY95F449H;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					EADC6C061AFE1BA500711EDE = {
 						CreatedOnToolsVersion = 6.2;
@@ -340,9 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = isshun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -350,9 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = isshun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

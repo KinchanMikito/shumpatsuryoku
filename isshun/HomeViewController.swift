@@ -8,6 +8,8 @@
 
 import UIKit
 
+import iAd
+
 class HomeViewController: UIViewController {
     
     @IBOutlet var label1:UILabel!
@@ -19,6 +21,10 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Automatic
+        
+        self.canDisplayBannerAds = true
         
         if no1 == 0{
             no1 = 1
